@@ -14,6 +14,13 @@
 		21ABFAA2210714E300A95AF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21ABFAA0210714E300A95AF4 /* LaunchScreen.storyboard */; };
 		21ABFAAD210714E300A95AF4 /* POSSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFAAC210714E300A95AF4 /* POSSampleTests.swift */; };
 		21ABFABC2107188B00A95AF4 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21ABFABB2107188A00A95AF4 /* Config.plist */; };
+		21ABFABE21071BE200A95AF4 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFABD21071BE200A95AF4 /* AppConfig.swift */; };
+		21ABFAC5210722AB00A95AF4 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFAC4210722AB00A95AF4 /* UserDefaultsExtension.swift */; };
+		21ABFAC7210727AF00A95AF4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFAC6210727AF00A95AF4 /* AccountViewController.swift */; };
+		21ABFACB210728BC00A95AF4 /* TwitterDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFACA210728BC00A95AF4 /* TwitterDataStore.swift */; };
+		21ABFACF21080CC400A95AF4 /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21ABFACE21080CC400A95AF4 /* Accounts.storyboard */; };
+		21ABFAD2210813B000A95AF4 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFAD1210813B000A95AF4 /* AccountTableViewCell.swift */; };
+		21ABFAD4210813C200A95AF4 /* StoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFAD3210813C200A95AF4 /* StoryboardExtensions.swift */; };
 		24D50379F33883927ED78C28 /* Pods_POSSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B56110EF714B7B3F2A7B9EAD /* Pods_POSSample.framework */; };
 		9670026604BD8EBB9C5538F6 /* Pods_POSSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A770F74FB4644EC35F41DD45 /* Pods_POSSampleTests.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +47,13 @@
 		21ABFAAC210714E300A95AF4 /* POSSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSSampleTests.swift; sourceTree = "<group>"; };
 		21ABFAAE210714E300A95AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21ABFABB2107188A00A95AF4 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		21ABFABD21071BE200A95AF4 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		21ABFAC4210722AB00A95AF4 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		21ABFAC6210727AF00A95AF4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		21ABFACA210728BC00A95AF4 /* TwitterDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterDataStore.swift; sourceTree = "<group>"; };
+		21ABFACE21080CC400A95AF4 /* Accounts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
+		21ABFAD1210813B000A95AF4 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		21ABFAD3210813C200A95AF4 /* StoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtensions.swift; sourceTree = "<group>"; };
 		277D394BDC7D4139DAB3B397 /* Pods-POSSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POSSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-POSSample/Pods-POSSample.release.xcconfig"; sourceTree = "<group>"; };
 		6F6A3F1ADCFAE6061EF4964F /* Pods-POSSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POSSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POSSample/Pods-POSSample.debug.xcconfig"; sourceTree = "<group>"; };
 		7763689D44008B7487062D34 /* Pods-POSSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POSSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POSSampleTests/Pods-POSSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,9 +132,10 @@
 		21ABFAB72107164300A95AF4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				21ABFA97210714E200A95AF4 /* AppDelegate.swift */,
-				21ABFA99210714E200A95AF4 /* ViewController.swift */,
-				21ABFA9B210714E200A95AF4 /* Main.storyboard */,
+				21ABFAC8210727B500A95AF4 /* UI */,
+				21ABFAD021080F0000A95AF4 /* Entity */,
+				21ABFAC9210728AC00A95AF4 /* DataStore */,
+				21ABFAC32107229000A95AF4 /* Util */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -134,6 +149,60 @@
 				21ABFAA3210714E300A95AF4 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		21ABFAC32107229000A95AF4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				21ABFACC21072A8300A95AF4 /* Extensions */,
+				21ABFABD21071BE200A95AF4 /* AppConfig.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		21ABFAC8210727B500A95AF4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				21ABFA97210714E200A95AF4 /* AppDelegate.swift */,
+				21ABFA99210714E200A95AF4 /* ViewController.swift */,
+				21ABFAC6210727AF00A95AF4 /* AccountViewController.swift */,
+				21ABFAD1210813B000A95AF4 /* AccountTableViewCell.swift */,
+				21ABFA9B210714E200A95AF4 /* Main.storyboard */,
+				21ABFACE21080CC400A95AF4 /* Accounts.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		21ABFAC9210728AC00A95AF4 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				21ABFACA210728BC00A95AF4 /* TwitterDataStore.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		21ABFACC21072A8300A95AF4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21ABFACD21072A8900A95AF4 /* Rx */,
+				21ABFAD3210813C200A95AF4 /* StoryboardExtensions.swift */,
+				21ABFAC4210722AB00A95AF4 /* UserDefaultsExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		21ABFACD21072A8900A95AF4 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		21ABFAD021080F0000A95AF4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		86A86DC1CFE139999814B5FE /* Pods */ = {
@@ -154,12 +223,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21ABFAB1210714E300A95AF4 /* Build configuration list for PBXNativeTarget "POSSample" */;
 			buildPhases = (
-				21ABFABA2107179300A95AF4 /* Build Config.plist */,
 				CE241AA81F148FC4E83F7E03 /* [CP] Check Pods Manifest.lock */,
+				21ABFABA2107179300A95AF4 /* Build Config.plist */,
 				21ABFA90210714E100A95AF4 /* Sources */,
 				21ABFA91210714E100A95AF4 /* Frameworks */,
 				21ABFA92210714E100A95AF4 /* Resources */,
 				911149559C41260477B4ECD9 /* [CP] Embed Pods Frameworks */,
+				2413F0588892E45007E21DFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21ABFABC2107188B00A95AF4 /* Config.plist in Resources */,
+				21ABFACF21080CC400A95AF4 /* Accounts.storyboard in Resources */,
 				21ABFAA2210714E300A95AF4 /* LaunchScreen.storyboard in Resources */,
 				21ABFA9F210714E300A95AF4 /* Assets.xcassets in Resources */,
 				21ABFA9D210714E200A95AF4 /* Main.storyboard in Resources */,
@@ -263,6 +334,26 @@
 			shellPath = /bin/sh;
 			shellScript = "RES_DIR=\"$SRCROOT/$PROJECT/Resources\"\nSRC_DIR=\"$RES_DIR/Config\"\nScripts/Config.py -o $RES_DIR/Config.plist $SRC_DIR";
 		};
+		2413F0588892E45007E21DFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-POSSample/Pods-POSSample-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POSSample/Pods-POSSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		70A9353E07D311BB26741810 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,13 +380,19 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-POSSample/Pods-POSSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,8 +425,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21ABFABE21071BE200A95AF4 /* AppConfig.swift in Sources */,
+				21ABFAC7210727AF00A95AF4 /* AccountViewController.swift in Sources */,
 				21ABFA9A210714E200A95AF4 /* ViewController.swift in Sources */,
+				21ABFAC5210722AB00A95AF4 /* UserDefaultsExtension.swift in Sources */,
+				21ABFAD2210813B000A95AF4 /* AccountTableViewCell.swift in Sources */,
 				21ABFA98210714E200A95AF4 /* AppDelegate.swift in Sources */,
+				21ABFAD4210813C200A95AF4 /* StoryboardExtensions.swift in Sources */,
+				21ABFACB210728BC00A95AF4 /* TwitterDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

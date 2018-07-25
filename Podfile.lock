@@ -2,27 +2,40 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
+  - TwitterCore (3.1.0)
+  - TwitterKit (3.3.0):
+    - TwitterCore (>= 3.1.0)
   - XCGLogger (6.0.4):
     - XCGLogger/Core (= 6.0.4)
   - XCGLogger/Core (6.0.4):
     - ObjcExceptionBridging
 
 DEPENDENCIES:
+  - RxCocoa
   - RxSwift
+  - TwitterKit
   - XCGLogger
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ObjcExceptionBridging
+    - RxCocoa
     - RxSwift
+    - TwitterCore
+    - TwitterKit
     - XCGLogger
 
 SPEC CHECKSUMS:
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
+  TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
   XCGLogger: 4fc1bc0bdd5828cb8dc8da7a843536cda1bea8f3
 
-PODFILE CHECKSUM: 40860459f31bce58daabc4eb9bed77aa1a7cf5f6
+PODFILE CHECKSUM: 6139d71ba19ece68ca10a1196300d52f1132725e
 
 COCOAPODS: 1.5.3
