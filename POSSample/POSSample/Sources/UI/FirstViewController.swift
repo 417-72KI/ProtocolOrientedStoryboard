@@ -9,10 +9,12 @@
 import UIKit
 
 protocol FirstView: class {
-
+    var message: Message { get set }
 }
 
 class FirstViewController: UIViewController, FirstView {
+
+    var message: Message = Message(value: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,18 @@ class FirstViewController: UIViewController, FirstView {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.destination {
+        case let second as SecondView:
+            second.message = message
+        default:
+            break
+        }
+    }
 }
 
+extension FirstViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        message.value = textField.text ?? ""
+    }
+}

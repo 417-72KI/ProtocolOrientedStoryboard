@@ -8,16 +8,21 @@
 
 import UIKit
 
-protocol SecondView {
-    
+protocol SecondView: class {
+    var message: Message { get set }
 }
 
 class SecondViewController: UIViewController, SecondView {
+
+    var message: Message = Message(value: "")
+
+    @IBOutlet weak var messageLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        messageLabel.text = message.value
     }
 
     override func didReceiveMemoryWarning() {
