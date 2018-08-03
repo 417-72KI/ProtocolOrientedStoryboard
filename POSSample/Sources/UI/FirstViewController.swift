@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol FirstView: class {
+
+}
+
+class FirstViewController: UIViewController, FirstView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
