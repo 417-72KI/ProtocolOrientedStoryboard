@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2165E2652114556600F298A8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2165E2642114556600F298A8 /* SecondViewController.swift */; };
+		2165E2682114562600F298A8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2165E2672114562600F298A8 /* R.generated.swift */; };
 		21ABFA98210714E200A95AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFA97210714E200A95AF4 /* AppDelegate.swift */; };
 		21ABFA9A210714E200A95AF4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFA99210714E200A95AF4 /* FirstViewController.swift */; };
 		21ABFA9D210714E200A95AF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21ABFA9B210714E200A95AF4 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2165E2642114556600F298A8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2165E2672114562600F298A8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		21ABFA94210714E100A95AF4 /* POSSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POSSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21ABFA97210714E200A95AF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21ABFA99210714E200A95AF4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 		08E76BAEF56CE93210E2E47A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2165E2672114562600F298A8 /* R.generated.swift */,
 				B56110EF714B7B3F2A7B9EAD /* Pods_POSSample.framework */,
 				A770F74FB4644EC35F41DD45 /* Pods_POSSampleTests.framework */,
 			);
@@ -81,8 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				21ABFA97210714E200A95AF4 /* AppDelegate.swift */,
-				21ABFA99210714E200A95AF4 /* FirstViewController.swift */,
 				21ABFA9B210714E200A95AF4 /* Main.storyboard */,
+				21ABFA99210714E200A95AF4 /* FirstViewController.swift */,
+				2165E2642114556600F298A8 /* SecondViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -164,6 +170,7 @@
 			buildPhases = (
 				CE241AA81F148FC4E83F7E03 /* [CP] Check Pods Manifest.lock */,
 				21ABFABA2107179300A95AF4 /* Build Config.plist */,
+				2165E266211455DD00F298A8 /* Generate R.swift */,
 				21ABFA90210714E100A95AF4 /* Sources */,
 				21ABFA91210714E100A95AF4 /* Frameworks */,
 				21ABFA92210714E100A95AF4 /* Resources */,
@@ -257,6 +264,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2165E266211455DD00F298A8 /* Generate R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate R.swift";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
 		21ABFABA2107179300A95AF4 /* Build Config.plist */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,12 +318,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-POSSample/Pods-POSSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
@@ -336,8 +359,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2165E2652114556600F298A8 /* SecondViewController.swift in Sources */,
 				21ABFA9A210714E200A95AF4 /* FirstViewController.swift in Sources */,
 				21ABFA98210714E200A95AF4 /* AppDelegate.swift in Sources */,
+				2165E2682114562600F298A8 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

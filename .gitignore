@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/swift,python,cocoapods,ruby
+# Created by https://www.gitignore.io/api/swift,python,cocoapods,ruby,xcode
 
 ### CocoaPods ###
 ## CocoaPods GitIgnore Template
@@ -117,6 +117,18 @@ venv.bak/
 
 ### Python Patch ###
 .venv/
+
+### Python.VirtualEnv Stack ###
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+pip-selfcheck.json
 
 ### Ruby ###
 *.gem
@@ -241,5 +253,25 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 
+### Xcode ###
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-# End of https://www.gitignore.io/api/swift,python,cocoapods,ruby
+## User settings
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+
+
+# End of https://www.gitignore.io/api/swift,python,cocoapods,ruby,xcode
+
+*.generated.swift

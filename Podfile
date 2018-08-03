@@ -8,6 +8,7 @@ target 'POSSample' do
   # Pods for POSSample
   pod 'RxSwift'
   pod 'XCGLogger'
+  pod 'R.swift'
 
   target 'POSSampleTests' do
     inherit! :search_paths
