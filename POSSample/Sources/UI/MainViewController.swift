@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  POSSample
 //
 //  Created by T.Muta on 2018/07/24.
@@ -9,10 +9,21 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import TwitterKit
 
-class ViewController: UIViewController {
+protocol MainView: class {
+    var user: TWTRUser? { get set }
+}
+
+class MainViewController: UIViewController, MainView {
 
     let dataStore = TwitterDataStore()
+
+    var user: TWTRUser? {
+        didSet {
+
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,43 +34,45 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        if !dataStore.hasLoggedInUsers {
+        guard dataStore.hasLoggedInUsers else {
             let alert = UIAlertController(title: "アカウントがいるよ！", message: "設定画面に行くよ！", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
                 self.performSegue(withIdentifier: "accounts", sender: self)
             }))
             present(alert, animated: true, completion: nil)
+            return
         }
-        self.performSegue(withIdentifier: "accounts", sender: self)
+
+
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let accountView = segue.destination as? AccountView {
+            accountView.delegate = self
+        }
+    }
 }
 
-extension ViewController {
+extension MainViewController {
     @IBAction func backToTop(_ sender: UIStoryboardSegue) {
 
     }
 }
 
-extension ViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+private extension MainViewController {
+    var pageController: UIPageViewController {
+        return childViewControllers.compactMap { $0 as? UIPageViewController }.first ?? { fatalError("Page View Controller doesn't included") }()
     }
 }
 
-extension ViewController: UITableViewDelegate {
-
+extension MainViewController: AccountViewDelegate {
+    func accountView(_ accountView: AccountView, didUserChange user: TWTRUser) {
+        UserDefaults.standard.set(user, for: .currentAccount)
+        self.user = user
+    }
 }

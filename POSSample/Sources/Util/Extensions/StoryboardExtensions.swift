@@ -24,33 +24,11 @@ extension UITableViewCell {
     ///   - tableView: table view which cell registered
     ///   - indexPath: index path
     /// - Returns: dequeued cell
-    class func dequeue<T>(from tableView: UITableView, `for` indexPath: IndexPath) -> T where T: UITableViewCell, T: StoryboardIdentifiable {
+    class func dequeue<T: UITableViewCell>(from tableView: UITableView, `for` indexPath: IndexPath) -> T where T: StoryboardIdentifiable {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: T.identifier, for: indexPath) as? T else {
             fatalError("Identifier \"\(T.identifier)\" for class \"\(T.self)\" is not registered in \(tableView)")
         }
         return cell
-    }
-}
-
-// MARK: - UIViewController
-extension UIViewController {
-    /// 同storyboard内にあるViewControllerを生成する
-    ///
-    /// - Returns: 生成されたViewController
-    func instantiateIdentifiedViewControllerInSameStoryboard<T>() -> T where T: UIViewController, T: StoryboardIdentifiable {
-        guard let storyboard = storyboard else {
-            fatalError("\(self) is not instantiate from storyboard.")
-        }
-        return T.instantiate(from: storyboard)
-    }
-}
-
-private extension UIViewController {
-    class func instantiate<T>(from storyboard: UIStoryboard) -> T where T: UIViewController, T: StoryboardIdentifiable {
-        guard let vc = storyboard.instantiateViewController(withIdentifier: T.identifier) as? T else {
-            fatalError("Identifier \"\(T.identifier)\" for class \"\(T.self)\" is not defined in \(storyboard)")
-        }
-        return vc
     }
 }
 
@@ -75,5 +53,27 @@ private extension UIStoryboardSegue {
         default:
             return target
         }
+    }
+}
+
+// MARK: - UIViewController
+extension UIViewController {
+    /// 同storyboard内にあるViewControllerを生成する
+    ///
+    /// - Returns: 生成されたViewController
+    func instantiateIdentifiedViewControllerInSameStoryboard<T: UIViewController>() -> T where T: StoryboardIdentifiable {
+        guard let storyboard = storyboard else {
+            fatalError("\(self) is not instantiate from storyboard.")
+        }
+        return T.instantiate(from: storyboard)
+    }
+}
+
+private extension UIViewController {
+    class func instantiate<T: UIViewController>(from storyboard: UIStoryboard) -> T where T: StoryboardIdentifiable {
+        guard let vc = storyboard.instantiateViewController(withIdentifier: T.identifier) as? T else {
+            fatalError("Identifier \"\(T.identifier)\" for class \"\(T.self)\" is not defined in \(storyboard)")
+        }
+        return vc
     }
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		21ABFA98210714E200A95AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFA97210714E200A95AF4 /* AppDelegate.swift */; };
-		21ABFA9A210714E200A95AF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFA99210714E200A95AF4 /* ViewController.swift */; };
+		21ABFA9A210714E200A95AF4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFA99210714E200A95AF4 /* MainViewController.swift */; };
 		21ABFA9D210714E200A95AF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21ABFA9B210714E200A95AF4 /* Main.storyboard */; };
 		21ABFA9F210714E300A95AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21ABFA9E210714E300A95AF4 /* Assets.xcassets */; };
 		21ABFAA2210714E300A95AF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21ABFAA0210714E300A95AF4 /* LaunchScreen.storyboard */; };
@@ -21,6 +21,9 @@
 		21ABFACF21080CC400A95AF4 /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21ABFACE21080CC400A95AF4 /* Accounts.storyboard */; };
 		21ABFAD2210813B000A95AF4 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFAD1210813B000A95AF4 /* AccountTableViewCell.swift */; };
 		21ABFAD4210813C200A95AF4 /* StoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFAD3210813C200A95AF4 /* StoryboardExtensions.swift */; };
+		21ABFAD72108206F00A95AF4 /* TWTRUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFAD62108206F00A95AF4 /* TWTRUserView.swift */; };
+		21ABFAE321082D6500A95AF4 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFAE221082D6500A95AF4 /* UIImageViewExtension.swift */; };
+		21ABFAE5210853E900A95AF4 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ABFAE4210853E900A95AF4 /* TimelineViewController.swift */; };
 		24D50379F33883927ED78C28 /* Pods_POSSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B56110EF714B7B3F2A7B9EAD /* Pods_POSSample.framework */; };
 		9670026604BD8EBB9C5538F6 /* Pods_POSSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A770F74FB4644EC35F41DD45 /* Pods_POSSampleTests.framework */; };
 /* End PBXBuildFile section */
@@ -38,7 +41,7 @@
 /* Begin PBXFileReference section */
 		21ABFA94210714E100A95AF4 /* POSSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POSSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21ABFA97210714E200A95AF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		21ABFA99210714E200A95AF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		21ABFA99210714E200A95AF4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		21ABFA9C210714E200A95AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21ABFA9E210714E300A95AF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21ABFAA1210714E300A95AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +57,9 @@
 		21ABFACE21080CC400A95AF4 /* Accounts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
 		21ABFAD1210813B000A95AF4 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		21ABFAD3210813C200A95AF4 /* StoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtensions.swift; sourceTree = "<group>"; };
+		21ABFAD62108206F00A95AF4 /* TWTRUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWTRUserView.swift; sourceTree = "<group>"; };
+		21ABFAE221082D6500A95AF4 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		21ABFAE4210853E900A95AF4 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		277D394BDC7D4139DAB3B397 /* Pods-POSSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POSSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-POSSample/Pods-POSSample.release.xcconfig"; sourceTree = "<group>"; };
 		6F6A3F1ADCFAE6061EF4964F /* Pods-POSSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POSSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POSSample/Pods-POSSample.debug.xcconfig"; sourceTree = "<group>"; };
 		7763689D44008B7487062D34 /* Pods-POSSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POSSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POSSampleTests/Pods-POSSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 		21ABFAC32107229000A95AF4 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				21ABFAD52108206100A95AF4 /* Protocols */,
 				21ABFACC21072A8300A95AF4 /* Extensions */,
 				21ABFABD21071BE200A95AF4 /* AppConfig.swift */,
 			);
@@ -164,7 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				21ABFA97210714E200A95AF4 /* AppDelegate.swift */,
-				21ABFA99210714E200A95AF4 /* ViewController.swift */,
+				21ABFA99210714E200A95AF4 /* MainViewController.swift */,
+				21ABFAE4210853E900A95AF4 /* TimelineViewController.swift */,
 				21ABFAC6210727AF00A95AF4 /* AccountViewController.swift */,
 				21ABFAD1210813B000A95AF4 /* AccountTableViewCell.swift */,
 				21ABFA9B210714E200A95AF4 /* Main.storyboard */,
@@ -187,6 +195,7 @@
 				21ABFACD21072A8900A95AF4 /* Rx */,
 				21ABFAD3210813C200A95AF4 /* StoryboardExtensions.swift */,
 				21ABFAC4210722AB00A95AF4 /* UserDefaultsExtension.swift */,
+				21ABFAE221082D6500A95AF4 /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -203,6 +212,14 @@
 			children = (
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		21ABFAD52108206100A95AF4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				21ABFAD62108206F00A95AF4 /* TWTRUserView.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		86A86DC1CFE139999814B5FE /* Pods */ = {
@@ -426,12 +443,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				21ABFABE21071BE200A95AF4 /* AppConfig.swift in Sources */,
+				21ABFAE5210853E900A95AF4 /* TimelineViewController.swift in Sources */,
+				21ABFAD72108206F00A95AF4 /* TWTRUserView.swift in Sources */,
 				21ABFAC7210727AF00A95AF4 /* AccountViewController.swift in Sources */,
-				21ABFA9A210714E200A95AF4 /* ViewController.swift in Sources */,
+				21ABFA9A210714E200A95AF4 /* MainViewController.swift in Sources */,
 				21ABFAC5210722AB00A95AF4 /* UserDefaultsExtension.swift in Sources */,
 				21ABFAD2210813B000A95AF4 /* AccountTableViewCell.swift in Sources */,
 				21ABFA98210714E200A95AF4 /* AppDelegate.swift in Sources */,
 				21ABFAD4210813C200A95AF4 /* StoryboardExtensions.swift in Sources */,
+				21ABFAE321082D6500A95AF4 /* UIImageViewExtension.swift in Sources */,
 				21ABFACB210728BC00A95AF4 /* TwitterDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

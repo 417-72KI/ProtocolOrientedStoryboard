@@ -9,7 +9,7 @@ target 'POSSample' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'XCGLogger'
-  pod 'TwitterKit'
+  pod 'TwitterKit', :modular_headers => false
 
   target 'POSSampleTests' do
     inherit! :search_paths

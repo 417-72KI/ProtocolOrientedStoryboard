@@ -20,12 +20,11 @@ extension TwitterDataStore {
     }
 
     func fetchUsers() -> Observable<[TWTRUser]> {
+        let sessionList = TWTRTwitter.sharedInstance().sessionStore.existingUserSessions().compactMap { $0 as? TWTRAuthSession }
+        if sessionList.isEmpty {
+            return Observable.empty()
+        }
         return Observable.create({ observer in
-            let sessionList = TWTRTwitter.sharedInstance().sessionStore.existingUserSessions().compactMap { $0 as? TWTRAuthSession }
-            if sessionList.isEmpty {
-                return Disposables.create {}
-            }
-
             let client = TWTRAPIClient()
             let params = ["user_id": sessionList.compactMap { $0.userID }.joined(separator: ",")]
             var clientError: NSError?
@@ -57,9 +56,11 @@ extension TwitterDataStore {
     func login(with vc: UIViewController) -> Observable<TWTRSession> {
         return Observable.create({ observer in
             TWTRTwitter().logIn(with: vc) { session, error in
+                defer {
+                    observer.onCompleted()
+                }
                 if let session = session {
                     observer.onNext(session)
-                    observer.onCompleted()
                 }
                 if let error = error {
                     observer.onError(error)
@@ -67,8 +68,30 @@ extension TwitterDataStore {
             }
 
             return Disposables.create {
-
             }
         })
+    }
+
+    func getUser(session: TWTRSession) -> Observable<TWTRUser> {
+        return Observable.create({ observer in
+            TWTRAPIClient().loadUser(withID: session.userID, completion: { user, error in
+                defer {
+                    observer.onCompleted()
+                }
+                if let user = user {
+                    observer.onNext(user)
+                }
+                if let error = error {
+                    observer.onError(error)
+                }
+            })
+            return Disposables.create {
+            }
+        })
+    }
+
+    func getSession(userID: String) -> TWTRAuthSession? {
+        return TWTRTwitter.sharedInstance().sessionStore.session(forUserID: userID)
+
     }
 }

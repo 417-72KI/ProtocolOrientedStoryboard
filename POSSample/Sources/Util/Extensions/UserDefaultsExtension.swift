@@ -9,7 +9,14 @@
 import Foundation
 
 extension UserDefaults {
-    enum Keys {
-        
+    enum Keys: String {
+        case currentAccount
     }
+
+
+    func set(_ value: Any?, for key: Keys) {
+        set(value, forKey: key.rawValue)
+    }
+
+    
 }
