@@ -1,28 +1,19 @@
 //
-//  SecondViewController.swift
+//  ThirdViewController.swift
 //  POSSample
 //
-//  Created by T.Muta on 2018/08/03.
+//  Created by T.Muta on 2018/08/10.
 //  Copyright © 2018年 417.72KI. All rights reserved.
 //
 
 import UIKit
 
-protocol MessageView: class {
-    var message: Message { get set }
-}
-
-class SecondViewController: UIViewController, MessageView {
-
-    var message: Message = Message(value: "")
-
-    @IBOutlet weak var messageLabel: UILabel!
+class ThirdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        messageLabel.text = message.value
     }
 
     override func didReceiveMemoryWarning() {

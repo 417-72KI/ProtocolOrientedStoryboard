@@ -28,7 +28,7 @@ class FirstViewController: UIViewController, FirstView {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.destination {
-        case let second as SecondView:
+        case let second as MessageView:
             second.message = message
         default:
             break
@@ -37,7 +37,8 @@ class FirstViewController: UIViewController, FirstView {
 }
 
 extension FirstViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         message.value = textField.text ?? ""
+        return true
     }
 }
