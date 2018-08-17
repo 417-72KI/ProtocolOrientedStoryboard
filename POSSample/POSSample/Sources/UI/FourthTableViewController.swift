@@ -46,10 +46,10 @@ class FourthTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell",
-                                                       for: indexPath
-            ) as? MessageTableViewCell else { return UITableViewCell() }
-        cell.message = messages[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
+        if let messageView = cell as? MessageView {
+            messageView.message = messages[indexPath.row]
+        }
         return cell
     }
 
