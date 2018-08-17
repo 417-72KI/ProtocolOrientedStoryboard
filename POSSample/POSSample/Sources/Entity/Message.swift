@@ -11,3 +11,10 @@ import Foundation
 struct Message {
     var value: String
 }
+
+extension Message: ExpressibleByStringLiteral {
+    typealias StringLiteralType = String
+    init(stringLiteral value: String) {
+        self.value = value
+    }
+}

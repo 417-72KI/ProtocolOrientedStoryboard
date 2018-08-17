@@ -14,7 +14,7 @@ protocol MessageView: class {
 
 class SecondViewController: UIViewController, MessageView {
 
-    var message: Message = Message(value: "")
+    var message: Message = ""
 
     @IBOutlet weak var messageLabel: UILabel!
 

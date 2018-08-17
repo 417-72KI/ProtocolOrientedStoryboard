@@ -14,7 +14,7 @@ protocol FirstView: class {
 
 class FirstViewController: UIViewController, FirstView {
 
-    var message: Message = Message(value: "")
+    var message: Message = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
