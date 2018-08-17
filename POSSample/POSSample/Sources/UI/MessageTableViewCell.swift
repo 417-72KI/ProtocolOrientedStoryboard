@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MessageTableViewCell: UITableViewCell {
+class MessageTableViewCell: UITableViewCell, StoryboardIdentifiable {
 
     var message: Message {
         get {
