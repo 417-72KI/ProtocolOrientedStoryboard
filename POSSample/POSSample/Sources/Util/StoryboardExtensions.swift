@@ -24,5 +24,25 @@ extension UITableViewCell {
             fatalError("Identifier \"\(T.identifier)\" for class \"\(T.self)\" is not registered in \(tableView)")
         }
         return cell
+    }    
+}
+
+protocol IndexPathUsable {
+    var indexPath: IndexPath { get }
+}
+
+extension UITableViewCell: IndexPathUsable {
+    var indexPath: IndexPath {
+        guard let tableView = superview as? UITableView else { fatalError() }
+        guard let indexPath = tableView.indexPath(for: self) else { fatalError() }
+        return indexPath
+    }
+}
+
+extension UICollectionViewCell: IndexPathUsable {
+    var indexPath: IndexPath {
+        guard let collectionView = superview as? UICollectionView else { fatalError() }
+        guard let indexPath = collectionView.indexPath(for: self) else { fatalError() }
+        return indexPath
     }
 }

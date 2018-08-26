@@ -18,3 +18,10 @@ extension Message: ExpressibleByStringLiteral {
         self.value = value
     }
 }
+
+extension Message: ExpressibleByIntegerLiteral {
+    typealias IntegerLiteralType = Int
+    init(integerLiteral value: Int) {
+        self.value = String(value)
+    }
+}

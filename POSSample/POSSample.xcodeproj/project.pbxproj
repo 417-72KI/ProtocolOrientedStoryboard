@@ -24,6 +24,8 @@
 		21ABFABC2107188B00A95AF4 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21ABFABB2107188A00A95AF4 /* Config.plist */; };
 		24D50379F33883927ED78C28 /* Pods_POSSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B56110EF714B7B3F2A7B9EAD /* Pods_POSSample.framework */; };
 		9670026604BD8EBB9C5538F6 /* Pods_POSSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A770F74FB4644EC35F41DD45 /* Pods_POSSampleTests.framework */; };
+		B95E94B921315E1A003B4CF7 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95E94B821315E1A003B4CF7 /* FifthViewController.swift */; };
+		B95E94BB21315E4D003B4CF7 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95E94BA21315E4D003B4CF7 /* MessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		7763689D44008B7487062D34 /* Pods-POSSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POSSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POSSampleTests/Pods-POSSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A770F74FB4644EC35F41DD45 /* Pods_POSSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POSSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56110EF714B7B3F2A7B9EAD /* Pods_POSSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POSSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95E94B821315E1A003B4CF7 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		B95E94BA21315E4D003B4CF7 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		E3DA494AC2E70F4D3172A163 /* Pods-POSSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POSSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-POSSampleTests/Pods-POSSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,13 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				21ABFA97210714E200A95AF4 /* AppDelegate.swift */,
-				21ABFA9B210714E200A95AF4 /* Main.storyboard */,
-				218F78172126AEBB0040903F /* Table.storyboard */,
-				21ABFA99210714E200A95AF4 /* FirstViewController.swift */,
-				2165E2642114556600F298A8 /* SecondViewController.swift */,
-				214DB5E5211DCF4D0079F07B /* ThirdViewController.swift */,
-				218F781B2126AF5E0040903F /* FourthTableViewController.swift */,
-				218F78192126AF100040903F /* MessageTableViewCell.swift */,
+				B95E94BE213305C4003B4CF7 /* Main */,
+				B95E94BD213305B2003B4CF7 /* Table */,
+				B95E94BC21330564003B4CF7 /* Protocol */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -193,6 +193,36 @@
 				E3DA494AC2E70F4D3172A163 /* Pods-POSSampleTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B95E94BC21330564003B4CF7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B95E94BA21315E4D003B4CF7 /* MessageView.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B95E94BD213305B2003B4CF7 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				218F78172126AEBB0040903F /* Table.storyboard */,
+				218F781B2126AF5E0040903F /* FourthTableViewController.swift */,
+				218F78192126AF100040903F /* MessageTableViewCell.swift */,
+				B95E94B821315E1A003B4CF7 /* FifthViewController.swift */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		B95E94BE213305C4003B4CF7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				21ABFA9B210714E200A95AF4 /* Main.storyboard */,
+				21ABFA99210714E200A95AF4 /* FirstViewController.swift */,
+				2165E2642114556600F298A8 /* SecondViewController.swift */,
+				214DB5E5211DCF4D0079F07B /* ThirdViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,11 +425,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B95E94B921315E1A003B4CF7 /* FifthViewController.swift in Sources */,
 				2165E2652114556600F298A8 /* SecondViewController.swift in Sources */,
 				218F781C2126AF5E0040903F /* FourthTableViewController.swift in Sources */,
 				21ABFA9A210714E200A95AF4 /* FirstViewController.swift in Sources */,
 				2165E26B21145B7500F298A8 /* Message.swift in Sources */,
 				21ABFA98210714E200A95AF4 /* AppDelegate.swift in Sources */,
+				B95E94BB21315E4D003B4CF7 /* MessageView.swift in Sources */,
 				218F78232126C5F30040903F /* StoryboardExtensions.swift in Sources */,
 				214DB5E6211DCF4D0079F07B /* ThirdViewController.swift in Sources */,
 				218F781A2126AF100040903F /* MessageTableViewCell.swift in Sources */,
